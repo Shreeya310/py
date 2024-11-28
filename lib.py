@@ -20,14 +20,29 @@ class LIBRARY:
        print(f"{book} your book has been added to your book list.")
     def returnBooks(self,book):
        if book in self.lendDict:
-          del self.lendDict[book]
-          print(f"YOUR BOOK HAS BEEN RETURNED.")
-       else:
-          print(f"THAT BOOK WAS NOT BORROWED FROM US.")
-if __name__== '__main__':
+          del self.lendDict.pop[book]
+      
+if __name__ ==  '__main__':
    books =LIBRARY([
       'THE SAPIENS' , 'PERIL AT END HOUSE' , 'GRANDMA TALES', 'ALGORITHMS'], "LET'S UPSKILL")
-   user_name=input("THIS IS OUR LIBRARY!! KINDLY ENTER YOUR NAME:")
+   while(True):
+    print(f"WELCOME{books.name}LIBRARY!!! ENTER YOUR CHOICE TO CONTINUE.")
+    print("1-DISPLAY BOOKS")
+    print("2-BORROW A BOOK")
+    print("3-ADD A BOOK")
+    print("4-RETURN A BOOK")
+    print("5-BESTSELLERS")
+    user_choice=input()
+    if user_choice not in ['1','2','3','4','5']:
+       print("PLEASE ENTER A VALID OPTION")
+       continue
+    else:
+       user_choice=int(user_choice)
+    if user_choice ==1:
+     books.displayBooks()
+     
+
+
    
 
 
