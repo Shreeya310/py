@@ -1,0 +1,12 @@
+from tkinter import*
+window=Tk()
+window.geometry('700x300')
+l1=Label(text="ENTER THE REQUIRED NUMBER")
+l2=Label(text="ENTER THE REQUIRED NUMBER")
+e1=Entry()
+e2=Entry()
+l1.place(x=100,y=200)
+l2.place(x=300,y=200)
+e1.place(x=400,y=300)
+e2.place(x=600,y=300)
+window.mainloop()
