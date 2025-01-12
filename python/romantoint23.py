@@ -1,0 +1,11 @@
+def roman_to_int(s):
+    roman={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+    int_form=0
+    for i in range(len(s)):
+        if i+1<len(s) and roman[s[i]]<roman[s[i+1]]:
+          int_form-=roman[s[i]]
+        else:
+          int_form+=roman[s[i]]
+        return int_form
+s=input("ENTER A ROMAN NUMERAL:")
+print("INTEGER FORM OF",s,"IS",roman_to_int(s))      
